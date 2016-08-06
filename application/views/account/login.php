@@ -29,7 +29,7 @@
       <div class="form-group">
         <span class="glyphicon glyphicon-user"> <span class="loginform">Login</span></span>
       </div>
-      <form>
+      <form method="POST" action="login">
         <div class="form-group">
           <a href="https://www.facebook.com">
             <img src="../assets/imgs/google.png" width="100%" height="40px" class="login"/>
@@ -44,13 +44,14 @@
         </div>
         <div class="form-group loginform">
           <label for="exampleInputEmail1">Username or Email:</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+          <input name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
         </div>
         <div class="form-group loginform">
           <label for="exampleInputPassword1">Password:</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
         </div>
         <button type="submit" class="btn btn-block btn-warning loginform">Submit</button>
+        <input type="hidden" name="action" value="submit">
       </form>
     </div>
     <div clss="col-md-4">
