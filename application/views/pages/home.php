@@ -9,17 +9,17 @@
 						<span class="icon-bar"></span>
 					</button>
 				</div>
-					<div class = "col-md-2"></div><div class = "col-md-4"><a href="laureleye.com" class="navbar-brand" id = "brand-text"><p class = "navtext">laureleye</p></a></div>
+					<div class = "col-md-2"></div><div class = "col-md-4"><a href="<?php echo base_url();?>" class="navbar-brand" id = "brand-text"><p class = "navtext laureli">laureleye</p></a></div>
 					<div class = "col-md-4">
 				<!-- Collection of nav links and other content for toggling -->
 				<div id="navbarCollapse" class="collapse navbar-collapse">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="account/login" title = "Log In"><p class = "navtext">Log In</p></a></li>
-						<li><a href="account/signup" title = "Sign Up"><p class = "navtext">Sign Up</p></a></li>
+						<li><a href="<?php echo base_url();?>account/login" title = "Log In"><p class = "navtext">Log In</p></a></li>
+						<li><a href="<?php echo base_url();?>account/signup" title = "Sign Up"><p class = "navtext">Sign Up</p></a></li>
 					</ul>
 				</div>
 				</div>
-			</div>	
+			</div>
 		</nav>
 	<br><br><br>
 	<!-- DIV 1
@@ -41,7 +41,7 @@
 
 						<!-- Modal content -->
 							<div class="modal-content">
-								
+
 								<div class="modal-header">
 								<span class="close">×</span>
 								<h2>What subject to do you want to learn about?</h2>
@@ -67,11 +67,11 @@
 					</div>
 				</center>
 			</div>
-			
+
 		</div>
 		</div>
 	</div>
-	
+
 	<!-- DIV 2
 	--
 	--
@@ -79,24 +79,24 @@
 	-->
 	<div class ="container-fluid bg-2">
 	<div class="container content">
-			
+
 			<h1 align = "center"><strong>LaurelEye helps you learn better</strong></h1><br><br>
 			<div class = "col-md-4 div2text">
-				<div><img src="assets/imgs/ic6.png" height = "200px" width = "200px" ></div>
+				<div><img src="<?php echo base_url();?>assets/imgs/ic6.png" height = "200px" width = "200px" ></div>
 				<p class = "div2text">
 					<br><h3><strong>Learn <i>anything.</strong></i></h3><br>
 					Learn everything.
 				</p>
 			</div>
 			<div class = "col-md-4 div2text">
-				<div><img src="assets/imgs/ic5.png" height = "200px" width = "200px" ></div>
+				<div><img src="<?php echo base_url();?>assets/imgs/ic5.png" height = "200px" width = "200px" ></div>
 				<p class = "div2text">
 					<br><h3><strong>Teachers love <i>laureleye.</strong></i></h3><br>
 					Tutors love this website!
 				</p>
 			</div>
 			<div class = "col-md-4 div2text">
-				<div><img src="assets/imgs/ic4.png" height = "200px" width = "200px" ></div>
+				<div><img src="<?php echo base_url();?>assets/imgs/ic4.png" height = "200px" width = "200px" ></div>
 				<p class = "div2text">
 					<br><h3><strong>Study with your <i>friends.</strong></i></h3><br>
 					Learn with your friends through group study.
@@ -106,21 +106,21 @@
 			<div class = "col-md-12"></div>
 			<div class = "col-md-12"></div>
 			<div class = "col-md-4 div2text">
-			<div><img src="assets/imgs/ic3.png" height = "200px" width = "200px" ></div>
+			<div><img src="<?php echo base_url();?>assets/imgs/ic3.png" height = "200px" width = "200px" ></div>
 				<p class = "div2text">
 					<br><h3><strong>Be <i>globally</i> competitive</strong></h3><br>
 					Learn from mentors around the world.
 				</p>
 			</div>
 			<div class = "col-md-4 div2text">
-			<div><img src="assets/imgs/ic2.png" height = "200px" width = "200px" ></div>
+			<div><img src="<?php echo base_url();?>assets/imgs/ic2.png" height = "200px" width = "200px" ></div>
 				<p class = "div2text">
 					<br><h3><strong>A lot of <i>learning</i></strong></h3><br>
 					Any subjects you wish.
 				</p>
 			</div>
 			<div class = "col-md-4 div2text">
-			<div><img src="assets/imgs/ic1.png" height = "200px" width = "200px" ></div>
+			<div><img src="<?php echo base_url();?>assets/imgs/ic1.png" height = "200px" width = "200px" ></div>
 				<p class = "div2text">
 					<br><h3><strong><i>iOS</i> and <i>Android</i></strong></h3><br>
 					Very convenient and mobile friendly.
@@ -130,7 +130,7 @@
 		</div>
 	</div>
 	</div>
-	
+
 	<!-- DIV 3
 	--
 	--
@@ -138,63 +138,108 @@
 	-->
 	<div class ="container-fluid bg-3">
 		<div class = "container">
-			<h1 align = "center">How It Works</h1><br><br>
+			<h1 align = "center" style="font-size: 70px; letter-spacing: 0.1em">How It Works</h1><br><br>
 			<!--1-->
 			<div class = "container">
 				<div class = "container col-md-4">
-					<img src="assets/img/rme.png" height = "200px" width = "200px" >
+					<img src="<?php echo base_url();?>assets/imgs/login.png" height = "200px" width = "200px" >
 				</div>
 				<div class = "container col-md-8">
-					<p> Some content here. </p>
+					<br /><br /><br/><br />
+					<p class="works"> Login/Register</p>
 				</div>
 			</div>
 			<!--2-->
 			<div class = "container">
 				<div class = "container col-md-4">
-					<img src="assets/img/rme.png" height = "200px" width = "200px" >
+					<img src="<?php echo base_url();?>assets/imgs/input.png" height = "200px" width = "200px" >
 				</div>
 				<div class = "container col-md-8">
-					<p> Some content here. </p>
+					<p class="works"> Select a subject you need tutoring in </p>
 				</div>
 			</div>
 			<!--3-->
 			<div class = "container">
 				<div class = "container col-md-4">
-					<img src="assets/img/rme.png" height = "200px" width = "200px" >
+					<img src="<?php echo base_url();?>assets/imgs/find.png" height = "200px" width = "200px" >
 				</div>
 				<div class = "container col-md-8">
-					<p> Some content here. </p>
+					<p class="works"> Find a Tutor </p>
 				</div>
 			</div>
 		</div>
 	</div>
-	
+
 	<div class ="container-fluid bg-4">
 		<div class = "container">
 			<!-- DIV 4 -->
-			<h1 align = "center">What people are saying</h1><br><br>
-			
+
+      <h1 align = "center">What people are saying</h1><br><br>
+      <div class = "container col-md-3"></div>
+			<div class = "container col-md-8">
+						<div class="row pic">
+							<div class="col-md-1">
+								<img src="<?php echo base_url();?>assets/imgs/random4.jpg" height = "90px" width = "90px" class="img img-circle" >
+							</div>
+							<div class="col-md-1"></div>
+							<div class="col-md-7"><br/>
+							LaurelEye is the best site ever! I would have never passed Physics without it.
+							</div>
+						</div>
+						<br /><br />
+						<div class="row pic">
+							<div class="col-md-1">
+								<img src="<?php echo base_url();?>assets/imgs/random3.jpg" height = "90px" width = "90px" class="img img-circle" >
+							</div>
+							<div class="col-md-1"></div>
+							<div class="col-md-7"><br/>
+								Finally found a convenient place to find a mentor. I've always had a hard time finding for a tutor. LaurelEye makes it too easy.
+							</div>
+						</div>
+						<br /><br />
+						<div class="row pic">
+							<div class="col-md-1">
+								<img src="<?php echo base_url();?>assets/imgs/random2.jpg" height = "90px" width = "90px" class="img img-circle" >
+							</div>
+							<div class="col-md-1"></div>
+							<div class="col-md-7"><br/>
+									I've used other online tutorial services before but none come close to LaurelEye. Never has finding a tutor been this easy. With just a few clicks, I can find myself a credible tutor at an affordable price. Well done!
+							</div>
+						</div>
+						<br /><br />
+						<div class="row pic">
+							<div class="col-md-1">
+								<img src="<?php echo base_url();?>assets/imgs/random3.jpg" height = "90px" width = "90px" class="img img-circle" >
+							</div>
+							<div class="col-md-1"></div>
+							<div class="col-md-7"><br/>
+								I find it really easy to understand topics from the perspective of students just like me. Plus, it's so much cheaper than going to a tutorial service. Kudos LaurelEye team.
+							</div>
+						</div>
+					</div>
+						<br /><br /><br /><br />
 		</div>
 	</div>
-	
-	<div class ="container-fluid bg-5">
-		<div class = "container">
+
+	<div class ="container-fluid bg-5" style="padding-top: 80px; padding-bottom: 80px; color: white">
 			<!-- DIV 5 -->
-			<h1 align = "center">Joing millions of learners</h1><br><br>
-		</div>
-	</div>
-	
-	<div class ="container-fluid bg-6">
-		<div class = "container">
-			<!-- DIV 6 -->
-			<h1 align = "center">About the team</h1><br><br>
-		</div>
+			<center><span style="text-shadow: 0 1px 3px rgba(0,0,0,0.3); font-weight: 600;font-size: 36px;letter-spacing: 0.3px;">Join <span style="font-style: italic">millions</span> of learners</span></center>
+			<center><button class="btn btn-warning btn-lg" style="border-radius: 8px; text-shadow: 0px 1px 3px rgba(0,0,0,0.26); margin-top: 40px;">Register now, it's FREE!</button></center>
 	</div>
 </body>
-</html>   
+</html>
 
 <script>
-
+    /*$(document).ready(function(){
+      <!-- navbar transition script -->
+	  $(window).scroll(function() { // check if scroll event happened
+        if ($(document).scrollTop() > 50) { // check if user scrolled more than 50 from top of the browser window
+          $(".navbar-fixed-top").css("background-color", "#ffffff"); // if yes, then change the color of class "navbar-fixed-top" to white (#f8f8f8)
+        } else {
+          $(".navbar-fixed-top").css("background", "rgba(255, 255, 255, 0.3)"); // if not, change it back to transparent
+        }
+      });
+    });*/
 // Get the modal
 var modal = document.getElementById('myModal');
 
@@ -221,4 +266,4 @@ window.onclick = function(event) {
     }
 }
 
-</script>                             		
+</script>

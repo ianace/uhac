@@ -4,15 +4,15 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li class="laureli"><a href="#">laureleye</a></li>
+					<li class="laureli"><a href="<?php echo base_url();?>">laureleye</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#"><span class="glyphicon glyphicon-star"></span><span> 5.0</span></a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> <span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="#">Profile</a></li>
-							<li><a href="#">Sign Out</a></li>
+							<li><a href="<?php echo base_url();?>teacher/myProfile">Profile</a></li>
+							<li><a href="<?php echo base_url();?>account/logout">Sign Out</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -26,8 +26,8 @@
 			<div class = "list-group-item"><p class = "name"><?php echo $name?></p></div>
 
 			<div class="list-group">
-				<a href="#" class="list-group-item active">My Profile</a>
-				<a href="myLessons" class="list-group-item">My Lessons</a>
+				<a href="<?php echo base_url();?>teacher/myProfile" class="list-group-item active">My Profile</a>
+				<a href="<?php echo base_url();?>teacher/smyLessons" class="list-group-item">My Lessons</a>
 				<a href="#" class="list-group-item">Payment Statements</a>
 				<a href="#" class="list-group-item">Free Tutorials</a>
 				<a href="<?php echo base_url();?>account/logout" class="list-group-item">Log Out</a>
@@ -53,7 +53,7 @@
 				</tr>
 				<tr>
 					<td><strong>Profile Photo</strong></td>
-					<td><img src =assets/ "imgs/professor.jpg" class="img-circle" height = "50px" width = "50px"></img></td>
+					<td><img src = "imgs/professor.jpg" class="img-circle" height = "50px" width = "50px"></img></td>
 					<td><strong>Mobile </strong></td>
 					<td>09228325365</td>
 				</tr>
@@ -73,29 +73,11 @@
 			</div>
 		</div>
 	</div>
-  <div class ="container-fluid" style="padding-top: 0px; padding-bottom: 0px; color: white; background-color: black">
-		<div class="col-md-4">
-		</div>
-		<div class="col-md-4">
-			<img src="../assets/imgs/logo.jpg" class="img-circle" style="width: 60px; height: 60px"/>
-			&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 20px">Contact Us:</span>&nbsp;&nbsp;&nbsp;&nbsp;
-			<img src="../assets/imgs/contact.png"  style="width: 200px; height: 50px" />
-		</div>
-	</div>
 </body>
 </html>
 
 <script>
-    /*$(document).ready(function(){
-      <!-- navbar transition script -->
-	  $(window).scroll(function() { // check if scroll event happened
-        if ($(document).scrollTop() > 50) { // check if user scrolled more than 50 from top of the browser window
-          $(".navbar-fixed-top").css("background-color", "#ffffff"); // if yes, then change the color of class "navbar-fixed-top" to white (#f8f8f8)
-        } else {
-          $(".navbar-fixed-top").css("background", "rgba(255, 255, 255, 0.3)"); // if not, change it back to transparent
-        }
-      });
-    });*/
+
 // Get the modal
 var modal = document.getElementById('myModal');
 

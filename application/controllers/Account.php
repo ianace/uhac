@@ -46,12 +46,16 @@ class Account extends CI_Controller {
 
     public function signup($action = "view")
     {
-    	if($this->input->post())
+    	if($this->input->post('action') != false)
 	   	{
-	        $this->load->view('templates/header2');
-	        $this->load->view('account/signup');
-	        $this->load->view('templates/footer');
+	        $action = $this->input->post('action');
     	}
+        if($action == 'view')
+        {
+            $this->load->view('templates/signup_header');
+            $this->load->view('account/signup');
+            $this->load->view('templates/footer');
+        }
     	else
     	{
     		//to do: get role type and redirect accordingly 
@@ -66,7 +70,7 @@ class Account extends CI_Controller {
     	$this->load->model('Credential');
 
     	if($action == "view"){
-	        $this->load->view('templates/header2');
+	        $this->load->view('templates/login_header');
 	        $this->load->view('account/login');
 	        $this->load->view('templates/footer');
         }

@@ -3,21 +3,22 @@
 <head>
 	<meta charset="UTF-8">
 	<title>LaurelEye - To Seek Knowledge</title>
-	<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap-theme.min.css">
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="assets/style.css">
+	<link rel="stylesheet" href="<?php echo base_url();?>assets/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="<?php echo base_url();?>assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="<?php echo base_url();?>assets/bootstrap/css/bootstrap-theme.min.css">
+	<script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
+	<script src="<?php echo base_url();?>assets/bootstrap/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/style.css">
+	
 	<style>
 		body{
 			padding-top: 0px;
 			background-color: black;
-			<!--background-image: url("assets/imgs/hh2.jpg");-->
+			<!--background-image: url("imgs/hh2.jpg");-->
 			background-size:cover;
 		}
 		.bg-1 { 
-			background-image: url("assets/imgs/banner2.jpg");
+			background-image: url("<?php echo base_url();?>assets/imgs/banner2.jpg");
 			background-size: 1400px 550px;
 			color: #ffffff;
 		}

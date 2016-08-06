@@ -4,15 +4,15 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li class="laureli"><a href="#">laureli</a></li>
+					<li class="laureli"><a href="#"><?php echo base_url();?></a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#"><span class="glyphicon glyphicon-star"></span><span> 5.0</span></a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> <span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="#">Profile</a></li>
-							<li><a href="#">Sign Out</a></li>
+							<li><a href="<?php echo base_url();?>student/myProfile">Profile</a></li>
+							<li><a href="<?php echo base_url();?>account/logout">Sign Out</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -22,12 +22,12 @@
 	<div class = "container-fluid">
 		<div class = "container col-md-1"></div>
 		<div class = "container col-md-2">
-			<center><div class = "list-group-item"><img src="../assets/imgs/me.png" height = "150px" width = "150px" ></div></center>
+			<center><div class = "list-group-item"><img src="..<?php echo base_url();?>sets/imgs/me.png" height = "150px" width = "150px" ></div></center>
 			<div class = "list-group-item"><p class = "name"><?php echo $name;?></p></div>
 
 			<div class="list-group">
-				<a href="#" class="list-group-item active">My Profile</a>
-				<a href="myLessons" class="list-group-item">My Lessons</a>
+				<a href="<?php echo base_url();?>student/myProfile" class="list-group-item active">My Profile</a>
+				<a href="<?php echo base_url();?>student/myLessons" class="list-group-item">My Lessons</a>
 				<a href="#" class="list-group-item">Payment Statements</a>
 				<a href="#" class="list-group-item">Free Tutorials</a>
 				<a href="<?php echo base_url();?>account/logout" class="list-group-item">Log Out</a>
@@ -53,7 +53,7 @@
 				</tr>
 				<tr>
 					<td><strong>Profile Photo</strong></td>
-					<td><img src = "../assets/imgs/me.png" height = "50px" width = "50px"></img></td>
+					<td><img src = "<?php echo base_url();?>assets/imgs/me.png" height = "50px" width = "50px"></img></td>
 					<td><strong>Mobile </strong></td>
 					<td>09228325365</td>
 				</tr>
@@ -73,16 +73,7 @@
 </html>
 
 <script>
-    /*$(document).ready(function(){
-      <!-- navbar transition script -->
-	  $(window).scroll(function() { // check if scroll event happened
-        if ($(document).scrollTop() > 50) { // check if user scrolled more than 50 from top of the browser window
-          $(".navbar-fixed-top").css("background-color", "#ffffff"); // if yes, then change the color of class "navbar-fixed-top" to white (#f8f8f8)
-        } else {
-          $(".navbar-fixed-top").css("background", "rgba(255, 255, 255, 0.3)"); // if not, change it back to transparent
-        }
-      });
-    });*/
+
 // Get the modal
 var modal = document.getElementById('myModal');
 
