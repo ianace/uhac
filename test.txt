@@ -1,7 +1,16 @@
 this is a test file
 
+<<<<<<< HEAD
 by ian
 
 
 
 cris
+=======
+by ian ace
+
+hello\
+
+
+pat
+>>>>>>> 11f8c2ba356007c2468b4c32118227a6ab3b96b2
