@@ -32,46 +32,51 @@
 		.name{
 			color: black;
 		}
-
+    .navi{
+      padding-bottom: 0px;
+    }
+    .laureli{
+      font-size: 20px;
+      letter-spacing: 0.2em;
+      font-style: italic;
+    }
 </style>
-</head> 
-	
+</head>
+
 <body>
 	<!-- Navbar code
 	--
 	--
 	-->
-	<nav role="navigation" class="navbar navbar-default navbar-fixed-top" border = "0px">
-			<div>
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-					<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
-					<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-				</div>
-					<div class = "col-md-2"></div><div class = "col-md-4"><a href="laureleye.com" class="navbar-brand" id = "brand-text"><p class = "navtext">laureleye</p></a></div>
-					<div class = "col-md-4">
-				<!-- Collection of nav links and other content for toggling -->
-				<div id="navbarCollapse" class="collapse navbar-collapse">
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="login.html" title = "Log In"><p class = "navtext">Log In</p></a></li>
-						<li><a href="signup.html" title = "Sign Up"><p class = "navtext">Sign Up</p></a></li>
-					</ul>
-				</div>
-				</div>
-			</div>	
-		</nav>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid navi">
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="laureli"><a href="#">laureli</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-star"></span><span> 5.0</span></a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Sign Out</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
 	<div class = "container-fluid">
 		<div class = "container col-md-1"></div>
 		<div class = "container col-md-2">
 			<center><div class = "list-group-item"><img src="imgs/me.png" height = "150px" width = "150px" ></div></center>
 			<div class = "list-group-item"><p class = "name">Pineda, Gabriel Andrew</p></div>
-			
+
 			<div class="list-group">
-				<a href="#" class="list-group-item">My Profile</a>
+				<a href="studentmyprofile.html" class="list-group-item">My Profile</a>
 				<a href="#" class="list-group-item active">My Lessons</a>
 				<a href="#" class="list-group-item">Payment Statements</a>
 				<a href="#" class="list-group-item">Free Tutorials</a>
@@ -141,7 +146,7 @@
 		</div>
 	</div>
 </body>
-</html>   
+</html>
 
 <script>
     /*$(document).ready(function(){
@@ -165,7 +170,7 @@ var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal
 btn.onclick = function() {
-    modal.style.display = "block";	
+    modal.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
@@ -180,4 +185,6 @@ window.onclick = function(event) {
     }
 }
 
-</script>                             		
+</script>
+  </body>
+</html>
