@@ -1,0 +1,113 @@
+		nav .navbar-default{
+			 font-family: roboto;
+		}
+		.container{
+			margin-top: 80px;
+			color: white;
+			font-family: "roboto";
+			
+		}
+		.navtext{
+			color: gray;	
+		}
+		#typed-strings{
+			font-size 100px;
+		}
+		h1{
+			font-size : 3em;
+			font-family: "catamaran";
+		}
+		#cm, #am{
+			padding-bottom: 30px;
+		}
+		.txtt{
+			color: black !important;
+		}
+		.navbar-default{
+			background: rgb(255,255,255,0.3);
+		}
+		.nav a{
+			font-family: "roboto" !important;
+		}
+		#brand-text{
+			font-size: 2em;
+		}
+		.navicon{
+			color: white;
+			display: inline-block;
+			border: 1x solid white;
+			padding:10px;
+			/*background: rgba(47,79,79,0.5); */
+			background-color: transparent;
+		}
+		.active{
+			background-color: white;
+			color: #2f4f4f;
+		}
+		body{
+			background:rgba(100,100,100,0);
+		}
+		@font-face{
+			font-family : catamaran;
+			src: url("fonts/catamaran-regular.ttf");
+		}
+		@font-face{
+			font-family : cuyabra;
+			src: url("fonts/cuyabra.otf");
+		}
+		@font-face{
+			font-family : roboto;
+			src: url("fonts/roboto-light.ttf");
+		}
+		@font-face{
+			font-family : robotoBold;
+			src: url("fonts/roboto-bold.ttf");
+		}
+		/* code for animated blinking cursor */
+        .typed-cursor{
+            opacity: 1;
+            font-weight: 100;
+            -webkit-animation: blink 0.7s infinite;
+            -moz-animation: blink 0.7s infinite;
+            -ms-animation: blink 0.7s infinite;
+            -o-animation: blink 0.7s infinite;
+            animation: blink 0.7s infinite;
+        }
+        @-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-webkit-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-moz-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-ms-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-o-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+		body{
+			padding-top: 70px;
+			background-color: black	;
+			background-image: url("img/bggg.jpg");
+			background-repeat:repeat;
+			background-size:cover;
+		}
+		.txt{
+			font-size: 18px;
+			font-family: cuyabra;
+		}
+		
+	
