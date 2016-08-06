@@ -4,7 +4,7 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li class="laureli"><a href="#"><?php echo base_url();?></a></li>
+					<li class="laureli"><a href="<?php echo base_url();?>">laureleye</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#"><span class="glyphicon glyphicon-star"></span><span> 5.0</span></a></li>
@@ -22,7 +22,7 @@
 	<div class = "container-fluid">
 		<div class = "container col-md-1"></div>
 		<div class = "container col-md-2">
-			<center><div class = "list-group-item"><img src="..<?php echo base_url();?>sets/imgs/me.png" height = "150px" width = "150px" ></div></center>
+			<center><div class = "list-group-item"><img src="<?php echo base_url();?>assets/imgs/me.png" height = "150px" width = "150px" ></div></center>
 			<div class = "list-group-item"><p class = "name"><?php echo $name;?></p></div>
 
 			<div class="list-group">

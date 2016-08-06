@@ -27,7 +27,7 @@
 
 			<div class="list-group">
 				<a href="<?php echo base_url();?>teacher/myProfile" class="list-group-item active">My Profile</a>
-				<a href="<?php echo base_url();?>teacher/smyLessons" class="list-group-item">My Lessons</a>
+				<a href="<?php echo base_url();?>teacher/myLessons" class="list-group-item">My Lessons</a>
 				<a href="#" class="list-group-item">Payment Statements</a>
 				<a href="#" class="list-group-item">Free Tutorials</a>
 				<a href="<?php echo base_url();?>account/logout" class="list-group-item">Log Out</a>
