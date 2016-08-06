@@ -29,7 +29,8 @@
       <div class="form-group">
         <span class="glyphicon glyphicon-user"> <span class="loginform">Login</span></span>
       </div>
-      <form method="POST" action="login">
+      <?php echo form_open('AuthService');?>
+      <!--<form method="POST" action="login">-->
         <div class="form-group">
           <a href="https://www.facebook.com">
             <img src="../assets/imgs/google.png" width="100%" height="40px" class="login"/>
@@ -43,8 +44,8 @@
         <div class="form-group  loginform text-muted" style="font-style: italic"><center>------------------ or ------------------</center>
         </div>
         <div class="form-group loginform">
-          <label for="exampleInputEmail1">Username or Email:</label>
-          <input name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+          <label for="exampleInputEmail1">Username:</label>
+          <input name="username" type="username" class="form-control" id="exampleInputEmail1" placeholder="Username">
         </div>
         <div class="form-group loginform">
           <label for="exampleInputPassword1">Password:</label>

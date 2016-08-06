@@ -4,7 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class AuthService extends CI_Controller {
     public function __construct(){
         parent::__construct();
-        $this->load->library('form_validation');
+        session_start();
+        $this->load->library('form_validation', 'session');
         $this->load->helper('form', 'url');
         $this->load->model('Credential');
     }
@@ -16,14 +17,25 @@ class AuthService extends CI_Controller {
             redirect('account/login', 'refresh');
         }
         else{
-            $username $this->input->post
+            $username = $this->input->post('username');
+            $password = $this->input->post('password');
 
             $this->load->model('Credential');
-            $result = $this->Credential->auth('tonix15', 'asdf');
-            echo '<pre>';
-            print_r($result);
-            echo '</pre>';
-            exit;
+            $result = $this->Credential->auth($username, $password);
+            if(!$result){
+                $user_info = $this->Credential->user_info($username);
+                $_SESSION['id'] = $user_info['id'];
+                $_SESSION['username'] = $user_info['username'];
+                $_SESSION['fullname'] = $user_info['fullname'];
+                $_SESSION['role'] = $user_info['role'];
+                /*$data = array(
+                    'id' => $user_info['id'],
+                    'username' => $user_info['username'],
+                    'fullname' => $user_info['fullname'],
+                    'role' => $user_info['role'],
+                );
+                $this->session->set_userdata($data);*/
+            }
         }
     }
 }
