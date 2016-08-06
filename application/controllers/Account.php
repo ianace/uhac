@@ -18,6 +18,12 @@ class Account extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+    public function __construct()
+    {
+        parent::__construct();
+        session_start();
+
+    }
 	public function index()
 	{
 		$this->load->view('news');
@@ -40,9 +46,6 @@ class Account extends CI_Controller {
 
     public function signup($action = "view")
     {
-		echo "<pre>";
-		var_dump($this->input->post());
-		echo "</pre>";
     	if($this->input->post())
 	   	{
 	        $this->load->view('templates/header2');
@@ -61,22 +64,7 @@ class Account extends CI_Controller {
     {
         $this->load->library('form_validation', 'session');
     	$this->load->model('Credential');
-        session_start();
-        	
 
-        $this->load->helper('form');
-    	if($this->input->post())
-    	{
-
-    		$action = $this->input->post('action');
-            $username = $this->input->post('username');
-            $password = $this->input->post('password');
-
-            echo "<pre>";
-            var_dump($_SESSION);
-            echo "</pre>";
-            die();
-    	}
     	if($action == "view"){
 	        $this->load->view('templates/header2');
 	        $this->load->view('account/login');
@@ -110,6 +98,10 @@ class Account extends CI_Controller {
     	$this->load->model('account_model');
     	$account = $this->account_model->update_password();
     }
-
+    public function logout()
+    {
+        session_destroy();
+         redirect('account/login', 'refresh');
+    }
 
 }

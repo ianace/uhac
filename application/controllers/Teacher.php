@@ -8,10 +8,6 @@ class Teacher extends CI_Controller {
 		parent::__construct();
 		session_start();
 
-		// if(!isset($_SESSION['username']))
-		// {
-		// 	redirect('account/login', 'refresh');
-		// }
 	}
     public function myLessons($action = "view")
     {
