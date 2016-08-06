@@ -40,18 +40,16 @@ class Account extends CI_Controller {
 
     public function signup($action = "view")
     {
-    	 $data['title'] = ucfirst($page);
-        $this->load->view('templates/header', $data);
-        $this->load->view('account/'.$page, $data);
-        $this->load->view('templates/footer', $data);
+        $this->load->view('templates/header2');
+        $this->load->view('account/signup');
+        $this->load->view('templates/footer');
     }
 
     public function login($action = "view")
     {
-    	 $data['title'] = ucfirst($page);
-        $this->load->view('templates/header', $data);
-        $this->load->view('account/'.$page, $data);
-        $this->load->view('templates/footer', $data);
+        $this->load->view('templates/header2');
+        $this->load->view('account/login');
+        $this->load->view('templates/footer');
     }
     public function edit_to_bcrypt($id = 1)
     {
@@ -59,6 +57,7 @@ class Account extends CI_Controller {
 	    $account = $this->account_model->get_password($id);
 	    $data['username'] = $account['username'];
 	    $data['password'] = $account['password'];
+	    $data['id'] = $id;
 	    $data['hash'] = $this->bcrypt->hash_password($data['password']);
 	    $data['reversed_password'] = $this->bcrypt->check_password($data['password'], $data['hash']);
 

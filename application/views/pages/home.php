@@ -194,16 +194,7 @@
 </html>   
 
 <script>
-    /*$(document).ready(function(){
-      <!-- navbar transition script -->
-	  $(window).scroll(function() { // check if scroll event happened
-        if ($(document).scrollTop() > 50) { // check if user scrolled more than 50 from top of the browser window
-          $(".navbar-fixed-top").css("background-color", "#ffffff"); // if yes, then change the color of class "navbar-fixed-top" to white (#f8f8f8)
-        } else {
-          $(".navbar-fixed-top").css("background", "rgba(255, 255, 255, 0.3)"); // if not, change it back to transparent
-        }
-      });
-    });*/
+
 // Get the modal
 var modal = document.getElementById('myModal');
 
@@ -230,4 +221,4 @@ window.onclick = function(event) {
     }
 }
 
-</script> 
+</script>                             		

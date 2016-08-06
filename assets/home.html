@@ -29,7 +29,8 @@
 			 
 		}
 		.bg-3 {
-			background-color: #d28b3f;
+			background-color : #f75e20;
+			padding-top : 0px !important;
 			color: white;
 			
 		}
