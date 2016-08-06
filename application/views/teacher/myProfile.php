@@ -22,8 +22,8 @@
 	<div class = "container-fluid">
 		<div class = "container col-md-1"></div>
 		<div class = "container col-md-2">
-			<center><div class = "list-group-item"><img src="assets/imgs/professor.jpg" class="img-circle" height = "150px" width = "150px" ></div></center>
-			<div class = "list-group-item"><p class = "name">Sir Elmer</p></div>
+			<center><div class = "list-group-item"><img src="../assets/imgs/professor.jpg" class="img-circle" height = "150px" width = "150px" ></div></center>
+			<div class = "list-group-item"><p class = "name"><?php echo $name?></p></div>
 
 			<div class="list-group">
 				<a href="#" class="list-group-item active">My Profile</a>
@@ -39,14 +39,14 @@
 			<table class="table" style="max-width:900px;">
 				<tbody>
 				<thead>
-					<th colspan = "5"><h1>Sir Elmer</h1></th>
+					<th colspan = "5"><h1><?php echo $name?></h1></th>
 				</thead>
 				<tr>
 					<td colspan = "5"><strong>General Information</strong></td>
 				</tr>
 				<tr>
 					<td><strong>Name</strong></td>
-					<td>Sir Elmer</td>
+					<td><?php echo $name?></td>
 
 					<td><strong>Location</strong></td>
 					<td>Philippines,Cebu</td>
@@ -77,9 +77,9 @@
 		<div class="col-md-4">
 		</div>
 		<div class="col-md-4">
-			<img src="assets/imgs/logo.jpg" class="img-circle" style="width: 60px; height: 60px"/>
+			<img src="../assets/imgs/logo.jpg" class="img-circle" style="width: 60px; height: 60px"/>
 			&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 20px">Contact Us:</span>&nbsp;&nbsp;&nbsp;&nbsp;
-			<img src="assets/imgs/contact.png"  style="width: 200px; height: 50px" />
+			<img src="../assets/imgs/contact.png"  style="width: 200px; height: 50px" />
 		</div>
 	</div>
 </body>
