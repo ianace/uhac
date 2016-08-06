@@ -46,6 +46,14 @@ class Account_model extends CI_Model {
 
             $this->db->update('entries', $this, array('id' => $_POST['id']));
     }
+    public function get_role_type($id = false)
+    {
+        if($id != false ) {    
+            $query = $this->db->get_where('users', array('id' => $id));
+           
+            return $query->row_array()['role_id'];
+        }
+    }
 
 }
 

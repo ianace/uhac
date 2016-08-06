@@ -51,7 +51,8 @@ class Account extends CI_Controller {
     	}
     	else
     	{
-    		redirect('/student/myProfile');	
+    		//to do: get role type and redirect accordingly 
+    		redirect(base_url().'student/myProfile');	
     	}
 
     }
@@ -73,7 +74,9 @@ class Account extends CI_Controller {
         }
         else
         {
-        	redirect('/student/myProfile');	
+        	//to do: get role type and redirect accordingly 
+        	// echo site_url('student/myProfile');
+        	redirect('/student/myProfile','refresh'	);	
         }
     }
     public function edit_to_bcrypt($id = 1)
