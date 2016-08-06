@@ -3,24 +3,22 @@
 <head>
 	<meta charset="UTF-8">
 	<title>LaurelEye - To Seek Knowledge</title>
-	<link rel="stylesheet" href="../../assets/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap-theme.min.css">
-	<script src="../../assets/js/jquery.min.js"></script>
-	<script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="../../assets/style.css">
+	<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap-theme.min.css">
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/style.css">
 	<style>
 		body{
 			padding-top: 0px;
 			background-color: black;
 			<!--background-image: url("imgs/hh2.jpg");-->
-			background-repeat:repeat;
 			background-size:cover;
 		}
 		.bg-1 { 
-			<!--background-image: url("imgs/bg2.jpg");--->
-			background-color : #d28b3f;
-			background-size: cover;
+			background-image: url("imgs/banner2.jpg");
+			background-size: 1339px 470px;
 			color: #ffffff;
 		}
 		.bg-2 { 
