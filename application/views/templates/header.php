@@ -13,11 +13,11 @@
 		body{
 			padding-top: 0px;
 			background-color: black;
-			<!--background-image: url("imgs/hh2.jpg");-->
+			<!--background-image: url("assets/imgs/hh2.jpg");-->
 			background-size:cover;
 		}
 		.bg-1 { 
-			background-image: url("imgs/banner2.jpg");
+			background-image: url("assets/imgs/banner2.jpg");
 			background-size: 1339px 470px;
 			color: #ffffff;
 		}
