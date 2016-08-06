@@ -14,8 +14,8 @@
 				<!-- Collection of nav links and other content for toggling -->
 				<div id="navbarCollapse" class="collapse navbar-collapse">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="login.html" title = "Log In"><p class = "navtext">Log In</p></a></li>
-						<li><a href="signup.html" title = "Sign Up"><p class = "navtext">Sign Up</p></a></li>
+						<li><a href="account/login" title = "Log In"><p class = "navtext">Log In</p></a></li>
+						<li><a href="account/signup" title = "Sign Up"><p class = "navtext">Sign Up</p></a></li>
 					</ul>
 				</div>
 				</div>
