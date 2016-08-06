@@ -18,25 +18,20 @@
 		}
 		.bg-1 { 
 			background-image: url("assets/imgs/banner2.jpg");
-			background-size: 1339px 470px;
+			background-size: 1400px 550px;
 			color: #ffffff;
 		}
 		.bg-2 { 
-			background-color: #242729;
-			color: #9BA8B1;
+			background-color: #ffffff;
+			color: black;
 			padding-bottom : 0px;
+			padding-top : 0px !important;
+			 
 		}
 		.bg-3 {
 			background-color: #d28b3f;
 			color: white;
-		}
-		.bg-3 {
-			background-color: #d28b3f;
-			color: white;
-		}
-		.bg-3 {
-			background-color: #d28b3f;
-			color: white;
+			
 		}
 		.bg-4 {
 			background-color : #2429729;
@@ -50,6 +45,9 @@
 		.container-fluid {
 			padding-top: 70px;
 			padding-bottom: 70px;
+		}
+		.content{
+			color: black;
 		}
 
 </style>
