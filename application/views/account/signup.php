@@ -29,7 +29,7 @@
       <div class="form-group">
         <span class="glyphicon glyphicon-plus" style="color: black"> <span class="loginform">Sign Up</span></span>
       </div>
-      <form>
+      <form method="POST" action="signup">
         <div class="form-group">
           <a href="https://www.facebook.com">
             <img src="../assets/imgs/google.png" width="100%" height="40px" class="login"/>
@@ -44,15 +44,15 @@
         </div>
         <div class="form-group loginform">
           <label for="exampleInputEmail1">Username:</label>
-          <input type="email" class="form-control" id="exampleInputUsername" placeholder="Email">
+          <input name="username" type="email" class="form-control" id="exampleInputUsername" placeholder="Email">
         </div>
         <div class="form-group loginform">
           <label for="exampleInputEmail1">Email:</label>
-          <input type="email" class="form-control" id="exampleInputEmail" placeholder="Email">
+          <input name="email" type="email" class="form-control" id="exampleInputEmail" placeholder="Email">
         </div>
         <div class="form-group loginform">
           <label for="exampleInputPassword1">Password:</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
         </div>
         <div class="form-group loginform">
           <input type="checkbox"> I agree to the <a href="">terms of use</a></label>

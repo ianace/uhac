@@ -40,16 +40,41 @@ class Account extends CI_Controller {
 
     public function signup($action = "view")
     {
-        $this->load->view('templates/header2');
-        $this->load->view('account/signup');
-        $this->load->view('templates/footer');
+		echo "<pre>";
+		var_dump($this->input->post());
+		echo "</pre>";
+    	if($this->input->post())
+	   	{
+	        $this->load->view('templates/header2');
+	        $this->load->view('account/signup');
+	        $this->load->view('templates/footer');
+    	}
+    	else
+    	{
+    		redirect('/student/myProfile');	
+    	}
+
     }
 
     public function login($action = "view")
     {
-        $this->load->view('templates/header2');
-        $this->load->view('account/login');
-        $this->load->view('templates/footer');
+    		echo "<pre>";
+    		var_dump($this->input->post());
+    		echo "</pre>";
+    	if($this->input->post())
+    	{
+
+    		$action = $this->input->post('action');
+    	}
+    	if($action == "view"){
+	        $this->load->view('templates/header2');
+	        $this->load->view('account/login');
+	        $this->load->view('templates/footer');
+        }
+        else
+        {
+        	redirect('/student/myProfile');	
+        }
     }
     public function edit_to_bcrypt($id = 1)
     {
