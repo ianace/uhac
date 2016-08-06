@@ -59,9 +59,12 @@ class Account extends CI_Controller {
 
     public function login($action = "view")
     {
-    		echo "<pre>";
-    		var_dump($this->input->post());
-    		echo "</pre>";
+        $this->load->library('form_validation', 'session');
+    	$this->load->model('Credential');
+        session_start();
+        	
+
+        $this->load->helper('form');
     	if($this->input->post())
     	{
 
@@ -78,6 +81,10 @@ class Account extends CI_Controller {
         	// echo site_url('student/myProfile');
         	redirect('/student/myProfile','refresh'	);	
         }
+        echo "<pre>";
+            var_dump($_SESSION);
+            echo "</pre>";
+            exit;
     }
     public function edit_to_bcrypt($id = 1)
     {
