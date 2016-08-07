@@ -7,12 +7,16 @@ class Teacher_model extends CI_Model {
             $this->load->database(); 
     }
 
-
+    public function bla()
+    {
+        echo "bla";
+    }
 
     public function searchMentor($preference = array())
     {
         if(count($preference) != 0)
         {
+            echo "coutn of array is not zer";
 /*            $query = $this->db->get_where('users', array('role_id' => 2));
             return $query->row_array();*/
 
@@ -43,7 +47,9 @@ class Teacher_model extends CI_Model {
 
             $this->db->where('role_id',2);
             $query = $this->db->get();
-            return $query;
+            $this->output->enable_profiler(TRUE);
+
+            return $query->result_array();
         }
         else
         {

@@ -23,11 +23,25 @@ class Student extends CI_Controller {
         $this->load->view('templates/footer');
     }
 
-    public function searchMentor($action = "vie")
+    public function searchMentor($action = "view")
     {
         $data['name'] = $_SESSION['fullname'];
         $this->load->view('templates/header2');
         $this->load->view('student/searchMentor',$data);
         $this->load->view('templates/footer');
+    }
+
+    public function search()
+    {
+        var_dump($this->input->post());
+        if($this->input->post() != false)
+        {
+
+            $this->load->model('Teacher_model');
+            $data = $this->input->post('data');
+            $this->Teacher_model->bla();
+            $teacher = $this->Teacher_model->searchMentor($data);
+            var_dump($teacher);
+        }
     }
 }

@@ -1,3 +1,32 @@
+<script type="text/javascript">
+var preferences = [];
+function getPreferences()
+{
+	$('input,select.form-control > option:selected','form#searchParameters').each(
+	
+	function(){
+	if($(this).prop('tagName')== 'OPTION'){
+		console.log($(this).closest('select').attr('name') +" : "+$(this).val());
+		preferences[$(this).closest('select').attr('name')]   = $(this).val();
+	//console.log($(this).closest('select').attr('name'));
+	}
+	else{
+	//console.log($(this).attr('name'))
+	console.log($(this).attr('name') +" : "+ $(this).val());
+	preferences[$(this).attr('name')] = $(this).val();
+		}
+	});
+}
+function ajax()
+{
+	$.ajax({
+		'method':'POST',
+		'url' : '<?php echo base_url()?>student/search',
+		'data' : {'subject':preferences['subject'], 'price' : preferences['price'], 'language' : preferences['language']}
+	});
+
+}
+</script>>	
 <nav class="navbar navbar-default">
 		<div class="container-fluid navi">
 
