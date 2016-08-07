@@ -23,7 +23,7 @@
 		<div class = "container col-md-1"></div>
 		<div class = "container col-md-2">
 			<center><div class = "list-group-item"><img src="<?php echo base_url();?>assets/imgs/professor.jpg" class="img-circle" height = "150px" width = "150px" ></div></center>
-			<div class = "list-group-item"><p class = "name">Sir Elmer</p></div>
+			<div class = "list-group-item"><p class = "name"><?php echo $name;?></p></div>
 
 			<div class="list-group">
 				<a href="<?php echo base_url();?>teacher/myProfile" class="list-group-item">My Profile</a>

@@ -23,7 +23,7 @@
 		<div class = "container col-md-1"></div>
 		<div class = "container col-md-2">
 			<center><div class = "list-group-item"><img src="../assets/imgs/me.png" height = "150px" width = "150px" ></div></center>
-			<div class = "list-group-item"><p class = "name">Pineda, Gabriel Andrew</p></div>
+			<div class = "list-group-item"><p class = "name"><?php echo $name;?></p></div>
 
 			<div class="list-group">
 				<a href="myProfile" class="list-group-item">My Profile</a>

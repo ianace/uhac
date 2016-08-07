@@ -11,14 +11,27 @@ class Teacher extends CI_Controller {
 	}
     public function myLessons($action = "view")
     {
+        if(isset($_SESSION['id'])){
+            $this->load->model('User');
+            $id = $_SESSION['id'];
+            $obj = $this->User->getUserInfo($id);            
+            $data['email'] = $obj['email'];
+            $data['name'] = $obj['fullname'];
+        }
         $this->load->view('templates/header2');
-        $this->load->view('teacher/myLessons');
+        $this->load->view('teacher/myLessons', $data);
         $this->load->view('templates/footer');
     }
 
     public function myProfile($action = "view")
     {
-    	$data['name'] = $_SESSION['fullname'];
+    	if(isset($_SESSION['id'])){
+            $this->load->model('User');
+            $id = $_SESSION['id'];
+            $obj = $this->User->getUserInfo($id);            
+            $data['email'] = $obj['email'];
+            $data['name'] = $obj['fullname'];
+        }
         $this->load->view('templates/header2');
         $this->load->view('teacher/myProfile',$data);
         $this->load->view('templates/footer');
