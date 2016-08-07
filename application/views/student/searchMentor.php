@@ -76,7 +76,7 @@ function ajax()
 			        	<form id="searchParameters" action="<?php echo base_url();?>teacher/result" >
 			        	<div class="container">
 			        	<div class="col-md-2">
-			            <select class="form-control" name="language">
+			            <select class="form-control" name="language" id="language">
 						  <option value="1" selected>English</option> 
 						  <option value="2" >Tagalog</option>
 						  <option value="3">Chinese</option>
@@ -84,16 +84,16 @@ function ajax()
 						</select>
 						</div>
 						<div class="col-md-2">
-			            <input class="form-control" name="price" type="text" placeholder="Tutorial Fee(per hour)"/>
+			            <input class="form-control" name="price" id="price" type="text" placeholder="Tutorial Fee(per hour)"/>
 			            </div>
 			            <div class="col-md-2">
-			            <select class="form-control" name="subject">
+			            <select class="form-control" name="subject" id="subject">
 						  <option value="1" selected>Math</option> 
 						  <option value="2" >Physics</option>
 						</select>
 						</div>
 						<div class="col-md-2">
-						<button class="btn btn-primary">Search Mentor</button>
+						<button id="sure" class="btn btn-primary" >Search Mentor</button>
 						</div>
 						</div>
 			            
@@ -102,6 +102,83 @@ function ajax()
 			        </tr>
 				</tbody>
 			</table>
+			<script type="text/javascript">
+				$("#sure").click(function(e){
+					e.preventDefault();
+					$('#searchResult').toggle('show');
+					$("#spanLang").text($("#language option:selected").text());
+					$("#spanSub").text($("#subject option:selected").text());
+				});
+
+			</script>
+
+			<div id="searchResult" style="display:none; width:250px;">
+			<div class="container col-md-9">
+			<center><img src="http://localhost/uhac//assets/imgs/professor.jpg" class="img-circle" height="150px" width="150px"></center>
+			<div class="list-group-item"><p class="name">Sir Tony<br/><span id="spanLang">English</span><span id="spanSub">Math</span> </p></div>
+
+			
+		</div>
+			
+				
+				
+			<!-- <table class="table" style="">
+				<tbody>
+				<thead>
+					<th colspan = "5"><h1>My Lessons</h1></th>
+				</thead>
+				<tr>
+					<td><strong>Subject</strong></td>
+					<td><strong>Tutor</strong></td>
+					<td><strong>Fee</strong></td>
+					<td><strong>City</strong></td>
+					<td><strong>Payment Method</strong></td>
+				</tr>
+				<tr>
+					<td>07/5/16</td>
+					<td>Cris</td>
+					<td>PHP1,000</td>
+					<td>Cebu</td>
+					<td>UB</td>
+				</tr>
+				<tr>
+					<td>07/1/16</td>
+					<td>Adrian</td>
+					<td>PHP100</td>
+					<td>Bohol</td>
+					<td>UB</td>
+				</tr>
+				<tr>
+					<td>05/3/16</td>
+					<td>Patrick</td>
+					<td>PHP10,000</td>
+					<td>Talisay</td>
+					<td>BPI</td>
+				</tr>
+				<tr>
+					<td>02/1/16</td>
+					<td>Dave</td>
+					<td>PHP1.0</td>
+					<td>Lapu-Lapu</td>
+					<td>BPO</td>
+				</tr>
+				<tr>
+					<td>01/19/16</td>
+					<td>Joshua</td>
+					<td>PHP200.0</td>
+					<td>Cebu</td>
+					<td>UB</td>
+				</tr>
+				<tr>
+					<td>01/1/16</td>
+					<td>Laurence</td>
+					<td>PHP100.0</td>
+					<td>Cebu</td>
+					<td>BDO</td>
+				</tr>
+				</tbody>
+			</table>< -->
+			</div>
 			</div>
 		</div>
 	</div>
