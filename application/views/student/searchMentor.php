@@ -73,7 +73,7 @@ function ajax()
 			        <tr >
 			          <td>
 			        <!--     <input type="text" placeholder="Input Subject" /> -->
-			        	<form id="searchParameters">
+			        	<form id="searchParameters" action="<?php echo base_url();?>teacher/result" >
 			        	<div class="container">
 			        	<div class="col-md-2">
 			            <select class="form-control" name="language">

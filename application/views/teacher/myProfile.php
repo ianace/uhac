@@ -53,11 +53,9 @@
 				</tr>
 				<tr>
 					<td><strong>Profile Photo</strong></td>
-<<<<<<< HEAD
+
 					<td><img src ="<?php echo base_url();?>assets/imgs/professor.jpg" class="img-circle" height = "50px" width = "50px"></img></td>
-=======
-					<td><img src = "../assets/imgs/professor.jpg" class="img-circle" height = "50px" width = "50px"></img></td>
->>>>>>> 3e206b1acae69af03387fd43bc267c53cb51ee27
+
 					<td><strong>Mobile </strong></td>
 					<td>09228325365</td>
 				</tr>
