@@ -15,7 +15,6 @@ class Credential extends CI_Model{
 		$this->db->limit(1);
 
 		$query = $this->db->get();
-		$this->output->enable_profiler(TRUE);
 		return $query->num_rows() == 1 ? $query->result() : FALSE;
 	}
 

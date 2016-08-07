@@ -22,4 +22,12 @@ class Student extends CI_Controller {
         $this->load->view('student/myProfile',$data);
         $this->load->view('templates/footer');
     }
+
+    public function searchMentor($action = "vie")
+    {
+        $data['name'] = $_SESSION['fullname'];
+        $this->load->view('templates/header2');
+        $this->load->view('student/searchMentor',$data);
+        $this->load->view('templates/footer');
+    }
 }

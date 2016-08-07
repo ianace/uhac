@@ -30,6 +30,7 @@
 				<a href="<?php echo base_url();?>student/myLessons" class="list-group-item">My Lessons</a>
 				<a href="#" class="list-group-item">Payment Statements</a>
 				<a href="#" class="list-group-item">Free Tutorials</a>
+				<a href="<?php echo base_url();?>student/searchMentor" class="list-group-item">Search Mentor</a>
 				<a href="<?php echo base_url();?>account/logout" class="list-group-item">Log Out</a>
 				<a class = "list-group dummy"></a>
 			</div>

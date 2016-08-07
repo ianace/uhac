@@ -30,9 +30,9 @@ class AuthService extends CI_Controller {
 
             if($result){
                 $user_info = $this->Credential->user_info($username);
-                echo "<pre>";
+                /*echo "<pre>";
                 var_dump($user_info);
-                echo "</pre>";
+                echo "</pre>";*/
                 $_SESSION['id'] = $user_info['id'];
                 $_SESSION['username'] = $user_info['username'];
                 $_SESSION['fullname'] = $user_info['fullname'];
@@ -48,7 +48,7 @@ class AuthService extends CI_Controller {
                         break;
                         
                     case 'student':
-                        redirect('student/myProfile', 'refresh');
+                        redirect('student/myProfile ', 'refresh');
                         break;
                     default:
                         # code...
@@ -64,9 +64,6 @@ class AuthService extends CI_Controller {
                 );
                 $this->session->set_userdata($data);*/
             }
-            echo "<pre>";
-            var_dump($_SESSION);
-            echo "</pre>";
         }
     }
 }

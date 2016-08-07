@@ -22,7 +22,7 @@
 	<div class = "container-fluid">
 		<div class = "container col-md-1"></div>
 		<div class = "container col-md-2">
-			<center><div class = "list-group-item"><img src="../assets/imgs/professor.jpg" class="img-circle" height = "150px" width = "150px" ></div></center>
+			<center><div class = "list-group-item"><img src="<?php echo base_url();?>/assets/imgs/professor.jpg" class="img-circle" height = "150px" width = "150px" ></div></center>
 			<div class = "list-group-item"><p class = "name"><?php echo $name?></p></div>
 
 			<div class="list-group">
@@ -53,7 +53,7 @@
 				</tr>
 				<tr>
 					<td><strong>Profile Photo</strong></td>
-					<td><img src = "imgs/professor.jpg" class="img-circle" height = "50px" width = "50px"></img></td>
+					<td><img src ="<?php echo base_url();?>assets/imgs/professor.jpg" class="img-circle" height = "50px" width = "50px"></img></td>
 					<td><strong>Mobile </strong></td>
 					<td>09228325365</td>
 				</tr>

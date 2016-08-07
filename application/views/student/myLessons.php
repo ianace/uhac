@@ -26,10 +26,11 @@
 			<div class = "list-group-item"><p class = "name">Pineda, Gabriel Andrew</p></div>
 
 			<div class="list-group">
-				<a href="myProfile" class="list-group-item">My Profile</a>
-				<a href="#" class="list-group-item active">My Lessons</a>
+				<a href="<?php echo base_url();?>student/myProfile" class="list-group-item">My Profile</a>
+				<a href="<?php echo base_url();?>student/myLessons" class="list-group-item active">My Lessons</a>
 				<a href="#" class="list-group-item">Payment Statements</a>
 				<a href="#" class="list-group-item">Free Tutorials</a>
+				<a href="<?php echo base_url();?>student/searchMentor" class="list-group-item">Search Mentor</a>
 				<a href="<?php echo base_url();?>account/logout" class="list-group-item">Log Out</a>
 				<a class = "list-group dummy"></a>
 			</div>

@@ -11,8 +11,9 @@ class Teacher extends CI_Controller {
 	}
     public function myLessons($action = "view")
     {
+        $data['name'] = $_SESSION['fullname'];
         $this->load->view('templates/header2');
-        $this->load->view('teacher/myLessons');
+        $this->load->view('teacher/myLessons',$data);
         $this->load->view('templates/footer');
     }
 
