@@ -60,7 +60,7 @@
 				</tr>
 				<tr>
 					<td><strong>Email Address:</strong></td>
-					<td colspan = "3">gabbypineda@yahoo.com</td>
+					<td colspan = "3"><?php echo $email;?></td>
 				</tr>
 				<tr>
 					<td colspan = "4"><center><button type="button" class="btn btn-info" style = "width: 200px">Save</button></center></td>

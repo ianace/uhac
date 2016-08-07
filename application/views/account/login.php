@@ -38,7 +38,6 @@
       <span class="glyphicon glyphicon-user"> <span class="loginform">Login</span></span>
     </div>
     <?php echo form_open('AuthService');?>
-    <!--<form method="POST" action="login">-->
       <div class="form-group">
         <a href="https://www.facebook.com">
           <img src="<?php echo base_url();?>assets/imgs/google.png" width="100%" height="40px" class="login"/>
@@ -51,6 +50,9 @@
       </div>
       <div class="form-group  loginform text-muted" style="font-style: italic"><center>------------------ or ------------------</center>
       </div>
+      <?php if(isset($_SESSION['signup_status']) && $_SESSION['signup_status']):?>
+        <div class="alert alert-success"><strong>Account Created, Please Login.</strong></div>
+      <?php endif;?>
       <div class="form-group loginform">
         <label for="exampleInputEmail1">Username:</label>
         <input name="username" type="username" class="form-control" id="exampleInputEmail1" placeholder="Username">

@@ -10,13 +10,26 @@ class Student extends CI_Controller {
     }
     public function myLessons($action = "view")
     {
+        if(isset($_SESSION['id'])){
+            $this->load->model('User');
+            $id = $_SESSION['id'];
+            $obj = $this->User->getUserInfo($id);            
+            $data['email'] = $obj['email'];
+            $data['name'] = $obj['fullname'];
+        }
         $this->load->view('templates/header2');
-        $this->load->view('student/myLessons');
+        $this->load->view('student/myLessons', $data);
         $this->load->view('templates/footer');
     }
 
     public function myProfile($action = "view")
     {
+        if(isset($_SESSION['id'])){
+            $this->load->model('User');
+            $id = $_SESSION['id'];
+            $obj = $this->User->getUserInfo($id);
+            $data['email'] = $obj['email'];
+        }
         $data['name'] = $_SESSION['fullname'];
         $this->load->view('templates/header2');
         $this->load->view('student/myProfile',$data);

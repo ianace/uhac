@@ -53,13 +53,17 @@
 				</tr>
 				<tr>
 					<td><strong>Profile Photo</strong></td>
+<<<<<<< HEAD
 					<td><img src ="<?php echo base_url();?>assets/imgs/professor.jpg" class="img-circle" height = "50px" width = "50px"></img></td>
+=======
+					<td><img src = "../assets/imgs/professor.jpg" class="img-circle" height = "50px" width = "50px"></img></td>
+>>>>>>> 3e206b1acae69af03387fd43bc267c53cb51ee27
 					<td><strong>Mobile </strong></td>
 					<td>09228325365</td>
 				</tr>
 				<tr>
 					<td><strong>Email Address:</strong></td>
-					<td colspan = "3">sirelmer@yahoo.com</td>
+					<td colspan = "3"><?php echo $email;?></td>
 				</tr>
 				<tr>
 					<td colspan = "4"><center><button type="button" class="btn btn-info" style = "width: 200px">Save</button></center></td>
