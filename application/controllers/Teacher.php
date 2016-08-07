@@ -19,9 +19,22 @@ class Teacher extends CI_Controller {
 
     public function myProfile($action = "view")
     {
-    	$data['name'] = $_SESSION['fullname'];
-        $this->load->view('templates/header2');
-        $this->load->view('teacher/myProfile',$data);
-        $this->load->view('templates/footer');
+        if($this->input->post('action') != false)
+        {
+            $action = $this->input->post('action');
+        }
+        
+        if($action == 'view')
+        {
+            $data['name'] = $_SESSION['fullname'];
+            $this->load->view('templates/header2');
+            $this->load->view('teacher/myProfile',$data);
+            $this->load->view('templates/footer');
+        }
+        else
+        {
+
+        }
+    	
     }
 }

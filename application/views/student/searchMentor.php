@@ -41,13 +41,36 @@
 				<thead>
 					<th colspan = "5"><h1>Pineda, Gabriel Andrew A.</h1></th>
 				</thead>
-        <tr >
-          <td>
-            <input type="text" placeholder="Input Subject" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="text" placeholder="Tutorial Fee(per hour)"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="btn btn-primary">Search Mentor</button></td>
-        </tr>
-
+			        <tr >
+			          <td>
+			        <!--     <input type="text" placeholder="Input Subject" /> -->
+			        	<form id="searchParameters">
+			        	<div class="container">
+			        	<div class="col-md-2">
+			            <select class="form-control" name="language">
+						  <option value="1" selected>English</option> 
+						  <option value="2" >Tagalog</option>
+						  <option value="3">Chinese</option>
+						  <option value="4">Farsi</option>
+						</select>
+						</div>
+						<div class="col-md-2">
+			            <input class="form-control" name="price" type="text" placeholder="Tutorial Fee(per hour)"/>
+			            </div>
+			            <div class="col-md-2">
+			            <select class="form-control" name="subject">
+						  <option value="1" selected>Math</option> 
+						  <option value="2" >Physics</option>
+						</select>
+						</div>
+						<div class="col-md-2">
+						<button class="btn btn-primary">Search Mentor</button>
+						</div>
+						</div>
+			            
+			            </form>
+			            </td>
+			        </tr>
 				</tbody>
 			</table>
 			</div>

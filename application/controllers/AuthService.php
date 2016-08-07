@@ -30,9 +30,7 @@ class AuthService extends CI_Controller {
 
             if($result){
                 $user_info = $this->Credential->user_info($username);
-                /*echo "<pre>";
-                var_dump($user_info);
-                echo "</pre>";*/
+
                 $_SESSION['id'] = $user_info['id'];
                 $_SESSION['username'] = $user_info['username'];
                 $_SESSION['fullname'] = $user_info['fullname'];
@@ -55,14 +53,6 @@ class AuthService extends CI_Controller {
                         redirect('account/login', 'refresh');
                         break;
                 }
-                // die('here');
-                /*$data = array(
-                    'id' => $user_info['id'],
-                    'username' => $user_info['username'],
-                    'fullname' => $user_info['fullname'],
-                    'role' => $user_info['role'],
-                );
-                $this->session->set_userdata($data);*/
             }
         }
     }
