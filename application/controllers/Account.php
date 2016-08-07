@@ -2,28 +2,12 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Account extends CI_Controller {
-
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
     public function __construct()
     {
         parent::__construct();
         session_start();
-
     }
+
 	public function index()
 	{
 		$this->load->view('news');
@@ -46,10 +30,59 @@ class Account extends CI_Controller {
 
     public function signup($action = "view")
     {
-    	if($this->input->post('action') != false)
-	   	{
-	        $action = $this->input->post('action');
-    	}
+        $this->load->library('form_validation', 'session');
+        $this->load->helper('form', 'url');
+
+    	if($this->input->post('username')){
+            $this->form_validation->set_rules('username', 'Username', 'required|trim');
+            $this->form_validation->set_rules('email', 'Email', 'required|trim');
+            $this->form_validation->set_rules('password', 'Password', 'required|trim');
+            $this->form_validation->set_rules('name', 'Name', 'required|trim');
+            $this->form_validation->set_rules('role', 'Role', 'required');
+	        
+            if ($this->form_validation->run() === FALSE){
+                redirect('account/login', 'refresh');
+                 
+            }
+            else{
+                $username = $this->input->post('username');
+                $password = $this->input->post('password');
+                $email = $this->input->post('email');
+                $name = $this->input->post('name');
+                $role = $this->input->post('role');
+
+                $this->load->model('Credential');
+                $this->load->model('User');
+
+                $data = array(
+                    'name' => $name,
+                    'role_id' => $role,
+                    'created' => date('Y-m-d H:i:s')
+                );
+                $user_id = $this->User->add($data);
+
+                $credential_id = 0;
+
+                if($user_id){
+                    $data = array(
+                        'email' => $email,
+                        'username' => $username,
+                        'password' => $password,
+                        'user_id' => $user_id,
+                        'created' => date('Y-m-d H:i:s')
+                    );
+                    $credential_id = $this->Credential->add($data);
+                    if($credential_id){
+                        $_SESSION['signup_status'] = true;
+                        redirect('account/login', 'refresh');
+                    }
+                }
+                else{
+                    $_SESSION['signup_status'] = false;
+                }
+                
+            }
+        }
         if($action == 'view')
         {
             $this->load->view('templates/signup_header');

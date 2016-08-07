@@ -29,35 +29,34 @@
       <div class="form-group">
         <span class="glyphicon glyphicon-plus" style="color: black"> <span class="loginform">Sign Up</span></span>
       </div>
-      <form>
-        <div class="form-group">
-          <a href="https://www.facebook.com">
-            <img src="<?php echo base_url();?>assets/imgs/google.png" width="100%" height="40px" class="login"/>
-          </a>
-        </div>
-        <div class="form-group">
-          <a href="https://www.google.com">
-            <img  src="<?php echo base_url();?>assets/imgs/facebook.png" width="100%" height="40px" class="login"/>
-          </a>
-        </div>
-        <div class="form-group  loginform text-muted" style="font-style: italic"><center>------------------ or ------------------</center>
-        </div>
+      <?php echo form_open('Account/signup');?>
+      <?php if(isset($_SESSION['signup_status']) && !$_SESSION['signup_status']):?>
+        <div class="alert alert-danger"><strong>Account Creation Failed.</strong></div>
+      <?php endif;?>
         <div class="form-group loginform">
           <label for="exampleInputEmail1">Username:</label>
-          <input type="email" class="form-control" id="exampleInputUsername" placeholder="Email">
+          <input type="text" name="username" class="form-control" id="exampleInputUsername" placeholder="Username">
         </div>
         <div class="form-group loginform">
           <label for="exampleInputEmail1">Email:</label>
-          <input type="email" class="form-control" id="exampleInputEmail" placeholder="Email">
+          <input type="email" name="email" class="form-control" id="exampleInputEmail" placeholder="Email">
         </div>
         <div class="form-group loginform">
           <label for="exampleInputPassword1">Password:</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
         </div>
         <div class="form-group loginform">
-          <input type="checkbox"> I agree to the <a href="">terms of use</a></label>
+          <label for="exampleInputPassword1">Name:</label>
+          <input type="name" name="name" class="form-control" id="exampleInputPassword1" placeholder="Name">
         </div>
-        <button type="submit" class="btn btn-block btn-warning loginform">Sign In</button>
+        <div class="form-group loginform">
+          <label for="exampleInputPassword1">Role:</label>
+          <select class="form-control" name="role">
+            <option value="2">Mentor</option>
+            <option value="3">Student</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-block btn-warning loginform">Sign Up</button>
       </form>
     </div>
     <div clss="col-md-4">

@@ -25,5 +25,10 @@ class Credential extends CI_Model{
 		$result = $this->db->query($query, array($username))->result();
 		return get_object_vars($result[0]);
 	}
+
+	public function add($data){
+		$this->db->insert('credentials', $data);
+		return $this->db->insert_id();
+	}
 }
 ?>
